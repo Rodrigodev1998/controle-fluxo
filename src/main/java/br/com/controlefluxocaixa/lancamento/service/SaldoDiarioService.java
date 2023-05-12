@@ -1,8 +1,8 @@
-package br.com.controlefluxocaixa.service;
+package br.com.controlefluxocaixa.lancamento.service;
 
-import br.com.controlefluxocaixa.dto.SaldoDiarioDTO;
-import br.com.controlefluxocaixa.model.Lancamento;
-import br.com.controlefluxocaixa.repository.LancamentoRepository;
+import br.com.controlefluxocaixa.lancamento.dto.SaldoDiarioDTO;
+import br.com.controlefluxocaixa.lancamento.repository.LancamentoRepository;
+import br.com.controlefluxocaixa.lancamento.model.Lancamento;
 import br.com.controlefluxocaixa.strategy.LancamentoStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

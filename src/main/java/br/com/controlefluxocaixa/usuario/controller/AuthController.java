@@ -1,8 +1,8 @@
-package br.com.controlefluxocaixa.controller;
+package br.com.controlefluxocaixa.usuario.controller;
 
-import br.com.controlefluxocaixa.dto.Login;
-import br.com.controlefluxocaixa.model.Usuario;
-import br.com.controlefluxocaixa.service.security.TokenService;
+import br.com.controlefluxocaixa.usuario.dto.Login;
+import br.com.controlefluxocaixa.usuario.model.Usuario;
+import br.com.controlefluxocaixa.usuario.service.security.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

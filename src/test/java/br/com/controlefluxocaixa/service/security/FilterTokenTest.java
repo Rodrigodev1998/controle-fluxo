@@ -1,5 +1,6 @@
 package br.com.controlefluxocaixa.service.security;
 
+import br.com.controlefluxocaixa.usuario.service.security.FilterToken;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

@@ -1,6 +1,7 @@
 package br.com.controlefluxocaixa.repository;
 
-import br.com.controlefluxocaixa.model.Lancamento;
+import br.com.controlefluxocaixa.lancamento.model.Lancamento;
+import br.com.controlefluxocaixa.lancamento.repository.LancamentoRepository;
 import jakarta.validation.ConstraintViolationException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

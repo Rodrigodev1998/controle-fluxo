@@ -1,8 +1,9 @@
 package br.com.controlefluxocaixa.service;
 
-import br.com.controlefluxocaixa.dto.LancamentoDTO;
-import br.com.controlefluxocaixa.model.Lancamento;
-import br.com.controlefluxocaixa.repository.LancamentoRepository;
+import br.com.controlefluxocaixa.lancamento.dto.LancamentoDTO;
+import br.com.controlefluxocaixa.lancamento.model.Lancamento;
+import br.com.controlefluxocaixa.lancamento.repository.LancamentoRepository;
+import br.com.controlefluxocaixa.lancamento.service.LancamentoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.modelmapper.ModelMapper;

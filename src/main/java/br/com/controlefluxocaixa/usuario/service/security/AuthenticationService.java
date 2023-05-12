@@ -1,6 +1,6 @@
-package br.com.controlefluxocaixa.service.security;
+package br.com.controlefluxocaixa.usuario.service.security;
 
-import br.com.controlefluxocaixa.repository.UsuarioRepository;
+import br.com.controlefluxocaixa.usuario.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

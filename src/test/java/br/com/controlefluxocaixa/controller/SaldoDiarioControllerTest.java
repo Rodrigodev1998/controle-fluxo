@@ -1,7 +1,8 @@
 package br.com.controlefluxocaixa.controller;
 
-import br.com.controlefluxocaixa.dto.SaldoDiarioDTO;
-import br.com.controlefluxocaixa.service.SaldoDiarioService;
+import br.com.controlefluxocaixa.lancamento.controller.SaldoDiarioController;
+import br.com.controlefluxocaixa.lancamento.dto.SaldoDiarioDTO;
+import br.com.controlefluxocaixa.lancamento.service.SaldoDiarioService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

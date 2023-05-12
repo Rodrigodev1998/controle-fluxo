@@ -1,8 +1,9 @@
 package br.com.controlefluxocaixa.service;
 
-import br.com.controlefluxocaixa.dto.SaldoDiarioDTO;
-import br.com.controlefluxocaixa.model.Lancamento;
-import br.com.controlefluxocaixa.repository.LancamentoRepository;
+import br.com.controlefluxocaixa.lancamento.dto.SaldoDiarioDTO;
+import br.com.controlefluxocaixa.lancamento.model.Lancamento;
+import br.com.controlefluxocaixa.lancamento.repository.LancamentoRepository;
+import br.com.controlefluxocaixa.lancamento.service.SaldoDiarioService;
 import br.com.controlefluxocaixa.strategy.Credito;
 import br.com.controlefluxocaixa.strategy.Debito;
 import org.junit.jupiter.api.BeforeEach;

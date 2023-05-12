@@ -1,7 +1,8 @@
 package br.com.controlefluxocaixa.service.security;
 
-import br.com.controlefluxocaixa.model.Usuario;
-import br.com.controlefluxocaixa.repository.UsuarioRepository;
+import br.com.controlefluxocaixa.usuario.model.Usuario;
+import br.com.controlefluxocaixa.usuario.repository.UsuarioRepository;
+import br.com.controlefluxocaixa.usuario.service.security.AuthenticationService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

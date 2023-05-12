@@ -1,6 +1,7 @@
 package br.com.controlefluxocaixa.repository;
 
-import br.com.controlefluxocaixa.model.Usuario;
+import br.com.controlefluxocaixa.usuario.model.Usuario;
+import br.com.controlefluxocaixa.usuario.repository.UsuarioRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;

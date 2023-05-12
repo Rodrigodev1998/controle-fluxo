@@ -1,4 +1,4 @@
-package br.com.controlefluxocaixa.dto;
+package br.com.controlefluxocaixa.lancamento.dto;
 
 import lombok.*;
 

@@ -1,6 +1,7 @@
 package br.com.controlefluxocaixa.service.security;
 
-import br.com.controlefluxocaixa.model.Usuario;
+import br.com.controlefluxocaixa.usuario.model.Usuario;
+import br.com.controlefluxocaixa.usuario.service.security.TokenService;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.junit.jupiter.api.DisplayName;

@@ -1,6 +1,7 @@
 package br.com.controlefluxocaixa.controller;
 
-import br.com.controlefluxocaixa.dto.Login;
+import br.com.controlefluxocaixa.usuario.dto.Login;
+import br.com.controlefluxocaixa.usuario.controller.AuthController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;

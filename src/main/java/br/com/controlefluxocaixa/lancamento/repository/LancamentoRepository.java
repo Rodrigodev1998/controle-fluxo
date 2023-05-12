@@ -1,6 +1,6 @@
-package br.com.controlefluxocaixa.repository;
+package br.com.controlefluxocaixa.lancamento.repository;
 
-import br.com.controlefluxocaixa.model.Lancamento;
+import br.com.controlefluxocaixa.lancamento.model.Lancamento;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;

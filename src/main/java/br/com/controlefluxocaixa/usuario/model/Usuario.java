@@ -1,4 +1,4 @@
-package br.com.controlefluxocaixa.model;
+package br.com.controlefluxocaixa.usuario.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

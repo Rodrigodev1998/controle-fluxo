@@ -1,6 +1,6 @@
 package br.com.controlefluxocaixa.config;
 
-import br.com.controlefluxocaixa.service.security.FilterToken;
+import br.com.controlefluxocaixa.usuario.service.security.FilterToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

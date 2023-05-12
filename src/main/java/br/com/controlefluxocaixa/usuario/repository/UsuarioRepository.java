@@ -1,6 +1,6 @@
-package br.com.controlefluxocaixa.repository;
+package br.com.controlefluxocaixa.usuario.repository;
 
-import br.com.controlefluxocaixa.model.Usuario;
+import br.com.controlefluxocaixa.usuario.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {

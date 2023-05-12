@@ -1,7 +1,8 @@
 package br.com.controlefluxocaixa.controller;
 
-import br.com.controlefluxocaixa.dto.LancamentoDTO;
-import br.com.controlefluxocaixa.service.LancamentoService;
+import br.com.controlefluxocaixa.lancamento.controller.LancamentoController;
+import br.com.controlefluxocaixa.lancamento.dto.LancamentoDTO;
+import br.com.controlefluxocaixa.lancamento.service.LancamentoService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

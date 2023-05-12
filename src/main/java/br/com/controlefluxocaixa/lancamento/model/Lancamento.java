@@ -1,4 +1,4 @@
-package br.com.controlefluxocaixa.model;
+package br.com.controlefluxocaixa.lancamento.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;

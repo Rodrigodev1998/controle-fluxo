@@ -1,7 +1,7 @@
-package br.com.controlefluxocaixa.controller;
+package br.com.controlefluxocaixa.lancamento.controller;
 
-import br.com.controlefluxocaixa.dto.SaldoDiarioDTO;
-import br.com.controlefluxocaixa.service.SaldoDiarioService;
+import br.com.controlefluxocaixa.lancamento.dto.SaldoDiarioDTO;
+import br.com.controlefluxocaixa.lancamento.service.SaldoDiarioService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;

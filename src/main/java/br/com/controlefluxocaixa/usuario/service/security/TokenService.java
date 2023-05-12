@@ -1,6 +1,6 @@
-package br.com.controlefluxocaixa.service.security;
+package br.com.controlefluxocaixa.usuario.service.security;
 
-import br.com.controlefluxocaixa.model.Usuario;
+import br.com.controlefluxocaixa.usuario.model.Usuario;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;
