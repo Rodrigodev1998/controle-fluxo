@@ -25,16 +25,6 @@ public class LancamentoController {
         return ResponseEntity.status(CREATED).body(novoLancamento);
     }
 
-    @GetMapping("/{id}")
-    public LancamentoDTO buscarLancamento(@PathVariable Long id) {
-        return lancamentoService.buscarLancamento(id);
-    }
-
-    @GetMapping
-    public List<LancamentoDTO> listarLancamentos() {
-        return lancamentoService.listarLancamentos();
-    }
-
     @GetMapping(params = "data")
     public List<LancamentoDTO> listarLancamentosPorData(@RequestParam("data") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data) {
         return lancamentoService.listarLancamentos(data);

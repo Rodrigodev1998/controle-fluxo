@@ -8,6 +8,7 @@ import java.time.LocalDate;
 
 @Data
 public class LancamentoDTO {
+
     private String tipo;
     private String descricao;
     private BigDecimal valor;
