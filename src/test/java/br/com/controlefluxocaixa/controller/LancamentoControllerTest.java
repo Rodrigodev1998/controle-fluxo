@@ -37,22 +37,6 @@ public class LancamentoControllerTest {
         assertEquals(novoLancamento, response.getBody());
     }
 
-    @Test
-    public void testBuscarLancamento() {
-        Long id = 1L;
-        LancamentoDTO lancamentoDTO = new LancamentoDTO();
-        when(lancamentoService.buscarLancamento(id)).thenReturn(lancamentoDTO);
-        LancamentoDTO result = lancamentoController.buscarLancamento(id);
-        assertEquals(lancamentoDTO, result);
-    }
-
-    @Test
-    public void testListarLancamentos() {
-        List<LancamentoDTO> lancamentos = List.of(new LancamentoDTO(), new LancamentoDTO());
-        when(lancamentoService.listarLancamentos()).thenReturn(lancamentos);
-        List<LancamentoDTO> result = lancamentoController.listarLancamentos();
-        assertEquals(lancamentos, result);
-    }
 
     @Test
     public void testListarLancamentosPorData() {

@@ -1,5 +1,6 @@
 package br.com.controlefluxocaixa.lancamento.dto;
 
+import br.com.controlefluxocaixa.lancamento.model.TipoLancamento;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -9,7 +10,7 @@ import java.time.LocalDate;
 @Data
 public class LancamentoDTO {
 
-    private String tipo;
+    private TipoLancamento tipo;
     private String descricao;
     private BigDecimal valor;
 

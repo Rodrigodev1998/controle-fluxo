@@ -4,8 +4,8 @@ import br.com.controlefluxocaixa.lancamento.dto.SaldoDiarioDTO;
 import br.com.controlefluxocaixa.lancamento.model.Lancamento;
 import br.com.controlefluxocaixa.lancamento.repository.LancamentoRepository;
 import br.com.controlefluxocaixa.lancamento.service.SaldoDiarioService;
-import br.com.controlefluxocaixa.lancamento.strategy.Credito;
-import br.com.controlefluxocaixa.lancamento.strategy.Debito;
+import br.com.controlefluxocaixa.lancamento.calculadorLacamento.CalculadorCredito;
+import br.com.controlefluxocaixa.lancamento.calculadorLacamento.CalculadorDebito;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -30,10 +30,10 @@ public class SaldoDiarioServiceTest {
     private LancamentoRepository lancamentoRepository;
 
     @Mock
-    private Credito lancamentoCredito;
+    private CalculadorCredito lancamentoCredito;
 
     @Mock
-    private Debito lancamentoDebito;
+    private CalculadorDebito lancamentoDebito;
 
     @BeforeEach
     public void init() {

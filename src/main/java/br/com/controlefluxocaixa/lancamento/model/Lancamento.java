@@ -25,9 +25,9 @@ public class Lancamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "O tipo do lançamento é obrigatório")
+    @NotNull(message = "O tipo do lançamento é obrigatório")
     @Column(name = "tipo")
-    private String tipo;
+    private TipoLancamento tipo;
 
     @NotNull(message = "O valor do lançamento é obrigatório")
     @DecimalMin(value = "0.01", message = "O valor do lançamento deve ser maior que zero")

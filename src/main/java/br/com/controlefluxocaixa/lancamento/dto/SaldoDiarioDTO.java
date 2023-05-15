@@ -13,6 +13,5 @@ import java.time.LocalDate;
 public class SaldoDiarioDTO {
     private LocalDate data;
     private BigDecimal saldoConsolidado;
-    private BigDecimal saldoNegativo;
     private BigDecimal saldoTotal;
 }

@@ -2,6 +2,7 @@ package br.com.controlefluxocaixa.lancamento.controller;
 
 import br.com.controlefluxocaixa.lancamento.dto.LancamentoDTO;
 import br.com.controlefluxocaixa.lancamento.service.LancamentoService;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import java.util.List;
 
 import static org.springframework.http.HttpStatus.CREATED;
 
+@Log4j2
 @RestController
 @RequestMapping("/lancamentos")
 public class LancamentoController {
@@ -21,7 +23,9 @@ public class LancamentoController {
 
     @PostMapping
     public ResponseEntity<LancamentoDTO> adicionarLancamento(@RequestBody LancamentoDTO lancamentoDTO) {
+        log.info("[inicia] LancamentoController - adicionarLancamento");
         var novoLancamento = lancamentoService.adicionarLancamento(lancamentoDTO);
+        log.info("[finaliza] LancamentoController - adicionarLancamento");
         return ResponseEntity.status(CREATED).body(novoLancamento);
     }
 
