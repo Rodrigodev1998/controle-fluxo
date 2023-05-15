@@ -3,7 +3,7 @@ package br.com.controlefluxocaixa.lancamento.service;
 import br.com.controlefluxocaixa.lancamento.dto.SaldoDiarioDTO;
 import br.com.controlefluxocaixa.lancamento.repository.LancamentoRepository;
 import br.com.controlefluxocaixa.lancamento.model.Lancamento;
-import br.com.controlefluxocaixa.strategy.LancamentoStrategy;
+import br.com.controlefluxocaixa.lancamento.strategy.LancamentoStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

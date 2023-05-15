@@ -27,7 +27,7 @@ class FilterTokenTest {
         HttpServletResponse response = Mockito.mock(HttpServletResponse.class);
         FilterChain filterChain = Mockito.mock(FilterChain.class);
 
-        filterToken.doFilterInternal(request, response, filterChain);
+        filterToken.doFilter(request, response, filterChain);
 
         assert SecurityContextHolder.getContext().getAuthentication() == null;
         Mockito.verify(filterChain).doFilter(request, response);
