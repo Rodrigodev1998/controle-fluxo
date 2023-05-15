@@ -40,7 +40,7 @@ public class SaldoDiarioService {
         }
 
         BigDecimal saldoConsolidado = totalCreditos.subtract(totalDebitos);
-        BigDecimal saldoNegativo = totalDebitos.compareTo(BigDecimal.ZERO) > 0 ? totalDebitos.abs().negate() : BigDecimal.ZERO;
+        BigDecimal saldoNegativo = totalDebitos.compareTo(BigDecimal.ZERO) > 0 ? totalDebitos : BigDecimal.ZERO;
 
         return SaldoDiarioDTO.builder()
                 .data(data)
@@ -49,4 +49,5 @@ public class SaldoDiarioService {
                 .saldoNegativo(saldoNegativo)
                 .build();
     }
+
 }
