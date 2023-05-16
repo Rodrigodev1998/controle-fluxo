@@ -2,7 +2,7 @@
 Este é um projeto de API RESTful para gerenciamento de fluxo de caixa de uma empresa. Com ele, é possível cadastrar lançamentos de crédito e débito e verificar o saldo diário.
 
 ## Desenho da arquitetura
-![api-fluxo-caixa drawio](imagens/diagrama%20de%20fluxo%20de%20caixa.png)
+![api-fluxo-caixa drawio](imagens/diagrama.png)
 
 ## Padrões de microserviço utilizados
 * Separação em camadas (Controller, Service e Repository)
