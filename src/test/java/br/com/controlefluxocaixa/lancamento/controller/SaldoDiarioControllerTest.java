@@ -1,6 +1,5 @@
-package br.com.controlefluxocaixa.controller;
+package br.com.controlefluxocaixa.lancamento.controller;
 
-import br.com.controlefluxocaixa.lancamento.controller.SaldoDiarioController;
 import br.com.controlefluxocaixa.lancamento.dto.SaldoDiarioDTO;
 import br.com.controlefluxocaixa.lancamento.service.SaldoDiarioService;
 import org.junit.jupiter.api.Test;

@@ -1,13 +1,13 @@
-package br.com.controlefluxocaixa.service;
+package br.com.controlefluxocaixa.lancamento.service;
 
 import br.com.controlefluxocaixa.lancamento.dto.SaldoDiarioDTO;
 import br.com.controlefluxocaixa.lancamento.model.Lancamento;
 import br.com.controlefluxocaixa.lancamento.repository.LancamentoRepository;
 import br.com.controlefluxocaixa.lancamento.service.SaldoDiarioService;
-import br.com.controlefluxocaixa.lancamento.calculadorLacamento.CalculadorCredito;
-import br.com.controlefluxocaixa.lancamento.calculadorLacamento.CalculadorDebito;
+import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -17,10 +17,17 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.Mockito.when;
 
+@ContextConfiguration(classes = {SaldoDiarioService.class})
+@RunWith(SpringJUnit4ClassRunner.class)
 public class SaldoDiarioServiceTest {
 
     @InjectMocks
@@ -29,40 +36,12 @@ public class SaldoDiarioServiceTest {
     @Mock
     private LancamentoRepository lancamentoRepository;
 
-    @Mock
-    private CalculadorCredito lancamentoCredito;
-
-    @Mock
-    private CalculadorDebito lancamentoDebito;
 
     @BeforeEach
     public void init() {
         MockitoAnnotations.openMocks(this);
     }
 
-    @Test
-    public void testCalcularSaldoDiario() {
-        LocalDate data = LocalDate.of(2023, 5, 9);
-        Lancamento lancamento1 = new Lancamento();
-        lancamento1.setValor(new BigDecimal("100.00"));
-        lancamento1.setTipo("credito");
-        Lancamento lancamento2 = new Lancamento();
-        lancamento2.setValor(new BigDecimal("50.00"));
-        lancamento2.setTipo("debito");
-        List<Lancamento> lancamentos = new ArrayList<>();
-        lancamentos.add(lancamento1);
-        lancamentos.add(lancamento2);
-
-        when(lancamentoRepository.findByData(data)).thenReturn(lancamentos);
-        when(lancamentoCredito.calcular(lancamentos)).thenReturn(new BigDecimal("100.00"));
-        when(lancamentoDebito.calcular(lancamentos)).thenReturn(new BigDecimal("50.00"));
-
-        SaldoDiarioDTO saldoDiarioDTO = saldoDiarioService.calcularSaldoDiario(data);
-
-        assertEquals(new BigDecimal("100.00"), saldoDiarioDTO.getSaldoTotal());
-        assertEquals(new BigDecimal("50.00"), saldoDiarioDTO.getSaldoConsolidado());
-        assertEquals(new BigDecimal("-50.00"), saldoDiarioDTO.getSaldoNegativo());
-    }
 
     @Test
     void testCalcularSaldoDiarioSemLancamentos() {

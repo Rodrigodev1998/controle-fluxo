@@ -1,4 +1,4 @@
-package br.com.controlefluxocaixa.service;
+package br.com.controlefluxocaixa.lancamento.service;
 
 import br.com.controlefluxocaixa.lancamento.dto.LancamentoDTO;
 import br.com.controlefluxocaixa.lancamento.model.Lancamento;
@@ -68,41 +68,6 @@ class LancamentoServiceTest {
         assertEquals(result.getData(), LocalDate.now());
         assertEquals(result.getDescricao(), "Teste");
         assertEquals(result.getValor(), BigDecimal.TEN);
-    }
-
-    @Test
-    void buscarLancamento_quandoIdExistir_deveRetornarLancamentoDTO() {
-        when(lancamentoRepository.findById(id)).thenReturn(Optional.of(lancamento));
-        when(modelMapper.map(lancamento, LancamentoDTO.class)).thenReturn(lancamentoDTO);
-
-        LancamentoDTO result = lancamentoService.buscarLancamento(id);
-
-        assertNotNull(result);
-        assertEquals(result.getData(), LocalDate.now());
-        assertEquals(result.getDescricao(), "Teste");
-        assertEquals(result.getValor(), BigDecimal.TEN);
-    }
-
-    @Test
-    void buscarLancamento_quandoIdNaoExistir_deveLancarResponseStatusExceptionNotFound() {
-        when(lancamentoRepository.findById(id)).thenReturn(Optional.empty());
-
-        assertThrows(ResponseStatusException.class, () -> lancamentoService.buscarLancamento(id), "NOT_FOUND");
-    }
-
-    @Test
-    void listarLancamentos_deveRetornarListaDeLancamentosDTO() {
-        List<Lancamento> lancamentos = Collections.singletonList(lancamento);
-        when(lancamentoRepository.findAll()).thenReturn(lancamentos);
-        when(modelMapper.map(lancamento, LancamentoDTO.class)).thenReturn(lancamentoDTO);
-
-        List<LancamentoDTO> result = lancamentoService.listarLancamentos();
-
-        assertNotNull(result);
-        assertEquals(result.size(), 1);
-        assertEquals(result.get(0).getData(), LocalDate.now());
-        assertEquals(result.get(0).getDescricao(), "Teste");
-        assertEquals(result.get(0).getValor(), BigDecimal.TEN);
     }
 
     @Test

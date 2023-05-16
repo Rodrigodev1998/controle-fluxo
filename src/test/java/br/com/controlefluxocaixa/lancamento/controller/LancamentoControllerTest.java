@@ -1,6 +1,5 @@
-package br.com.controlefluxocaixa.controller;
+package br.com.controlefluxocaixa.lancamento.controller;
 
-import br.com.controlefluxocaixa.lancamento.controller.LancamentoController;
 import br.com.controlefluxocaixa.lancamento.dto.LancamentoDTO;
 import br.com.controlefluxocaixa.lancamento.service.LancamentoService;
 import org.junit.jupiter.api.Test;
@@ -36,7 +35,6 @@ public class LancamentoControllerTest {
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertEquals(novoLancamento, response.getBody());
     }
-
 
     @Test
     public void testListarLancamentosPorData() {

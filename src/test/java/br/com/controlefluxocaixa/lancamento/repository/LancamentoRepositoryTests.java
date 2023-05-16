@@ -1,6 +1,7 @@
-package br.com.controlefluxocaixa.repository;
+package br.com.controlefluxocaixa.lancamento.repository;
 
 import br.com.controlefluxocaixa.lancamento.model.Lancamento;
+import br.com.controlefluxocaixa.lancamento.model.TipoLancamento;
 import br.com.controlefluxocaixa.lancamento.repository.LancamentoRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class LancamentoRepositoryTests {
     @Test
     public void testSalvarLancamento() {
         Lancamento lancamento = new Lancamento();
-        lancamento.setTipo("Entrada");
+        lancamento.setTipo(TipoLancamento.CREDITO);
         lancamento.setValor(BigDecimal.valueOf(100.00));
         lancamento.setDescricao("Salário");
         lancamento.setData(LocalDate.now());
@@ -41,13 +42,13 @@ public class LancamentoRepositoryTests {
         LocalDate data = LocalDate.now();
 
         Lancamento lancamento1 = new Lancamento();
-        lancamento1.setTipo("Entrada");
+        lancamento1.setTipo(TipoLancamento.CREDITO);
         lancamento1.setValor(BigDecimal.valueOf(100.00));
         lancamento1.setDescricao("Salário");
         lancamento1.setData(data);
 
         Lancamento lancamento2 = new Lancamento();
-        lancamento2.setTipo("Saída");
+        lancamento2.setTipo(TipoLancamento.DEBITO);
         lancamento2.setValor(BigDecimal.valueOf(50.00));
         lancamento2.setDescricao("Conta de luz");
         lancamento2.setData(data);
@@ -78,7 +79,7 @@ public class LancamentoRepositoryTests {
     @Test
     public void testSalvarLancamentoSemValor() {
         Lancamento lancamento = new Lancamento();
-        lancamento.setTipo("Entrada");
+        lancamento.setTipo(TipoLancamento.CREDITO);
         lancamento.setDescricao("Salário");
         lancamento.setData(LocalDate.now());
 
@@ -92,7 +93,7 @@ public class LancamentoRepositoryTests {
     @Test
     public void testSalvarLancamentoSemDescricao() {
         Lancamento lancamento = new Lancamento();
-        lancamento.setTipo("Entrada");
+        lancamento.setTipo(TipoLancamento.CREDITO);
         lancamento.setValor(BigDecimal.valueOf(100.00));
         lancamento.setData(LocalDate.now());
 
@@ -106,7 +107,7 @@ public class LancamentoRepositoryTests {
     @Test
     void testSalvarLancamentoSemData() {
         Lancamento lancamento = new Lancamento();
-        lancamento.setTipo("SAÍDA");
+        lancamento.setTipo(TipoLancamento.CREDITO);
         lancamento.setValor(new BigDecimal("10.00"));
         lancamento.setDescricao("Teste");
         lancamento.setData(null);
@@ -117,21 +118,21 @@ public class LancamentoRepositoryTests {
     @Test
     void testFindByData() {
         Lancamento lancamento1 = new Lancamento();
-        lancamento1.setTipo("ENTRADA");
+        lancamento1.setTipo(TipoLancamento.CREDITO);
         lancamento1.setValor(new BigDecimal("10.00"));
         lancamento1.setDescricao("Teste 1");
         lancamento1.setData(LocalDate.of(2022, 5, 7));
         entityManager.persist(lancamento1);
 
         Lancamento lancamento2 = new Lancamento();
-        lancamento2.setTipo("SAÍDA");
+        lancamento2.setTipo(TipoLancamento.DEBITO);
         lancamento2.setValor(new BigDecimal("20.00"));
         lancamento2.setDescricao("Teste 2");
         lancamento2.setData(LocalDate.of(2022, 5, 7));
         entityManager.persist(lancamento2);
 
         Lancamento lancamento3 = new Lancamento();
-        lancamento3.setTipo("ENTRADA");
+        lancamento3.setTipo(TipoLancamento.DEBITO);
         lancamento3.setValor(new BigDecimal("30.00"));
         lancamento3.setDescricao("Teste 3");
         lancamento3.setData(LocalDate.of(2022, 5, 8));
